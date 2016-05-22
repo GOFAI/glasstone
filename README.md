@@ -34,7 +34,7 @@ The aims of this implementation are faithfulness to the original sources and eas
 FAQ
 ---
 
-1. *Is this legal? Isn't this sort of thing supposed to be classified?*
+*Is this legal? Isn't this sort of thing supposed to be classified?*
 
 All of the included models are derived from non-classified sources. Certain models
 were left out because of their murky legal status (for instance, those in the 1996
@@ -45,7 +45,7 @@ While far more information about this subject is classified than needs to be, hi
 sufficient physical knowledge to learn non-trivial things about nuclear weapons
 design. Don't worry, *nothing* here falls into that category!
 
-2. *Are these models 'right'?*
+*Are these models 'right'?*
 
 As George E. P. Box put it, "all models are wrong, but some are useful." These models
 are included because the U.S. and Soviet militaries definitely considered them
@@ -56,7 +56,7 @@ weapons effects models that can tell you what will "really happen" should these
 weapons be used. Note, for instance, the extent to which the Soviet and U.S. models
 disagree with each other...
 
-3. *Wait, the U.S. and the Soviet models don't match?! What's up with that?*
+*Wait, the U.S. and the Soviet models don't match?! What's up with that?*
 
 A major reason why nuclear weapons effects models are less accurate than we'd like is
 because they draw far less on atmospheric test experience than most people suppose.
@@ -81,7 +81,7 @@ U.S. analysts regarded as merely conjectural. As a result, "default" Soviet
 models of overpressure from nuclear explosions *assume* that these precursors are
 present, unlike their U.S. counterparts.
 
-4. *How did you make GLASSTONE?*
+*How did you make GLASSTONE?*
 
 Some of the models in the library were reimplemented versions of old FORTRAN programs
 specified in declassified research reports. Those from *The Effects of Nuclear Weapons* and *Iadernoe oruzhie*, however, were generally constructed by using graph
@@ -92,7 +92,7 @@ My implementation takes pains to avoid giving output that is outside the origina
 graphs from which it is derived. When such a value is requested it will result in a
 `ValueOutsideGraph` error.
 
-5. *How do I use GLASSTONE*?
+*How do I use GLASSTONE*?
 
 Glasstone is a Python library that builds on numpy and SciPy. Its only other
 dependency is `affine`, which is only used by the fallout model. It is recommended,
@@ -132,14 +132,14 @@ pip intall pip install -e .
 For practical examples of how to use glasstone, see the scripts in the `/examples`
 folder.
 
-5. *What can I use GLASSTONE for?*
+*What can I use GLASSTONE for?*
 
 Glasstone can be used for:
 * education-plots, graphs, and other visuals to help others better understand nuclear weapons
 * damage assessment studies-these models were used by the Cold War superpowers to estimate the effects of nuclear attack
 * {am|be}musement
 
-6. *What are these crazy units that you're using?*
+*What are these crazy units that you're using?*
 
 Cold War-era nuclear weapons effects models employed a bewildering array of non-SI
 units. Trust me, you don't want to deal in things like kilofeet or (this was the worst
@@ -148,7 +148,7 @@ meters, m/s, kilotons(kT), kg/cm^2, even though the U.S. models familiar to most
 English speakers do not use them. Roentgen/Rads are a partial exception, since the
 Russian/Soviet models also used these.
 
-7. *I don't undertand what the output of the fallout model.*
+*I don't undertand what the output of the fallout model.*
 
 The provided fallout model is WSEG-10, which was developed by the Weapons Systems
 Evaluation Group in 1959. I chose WSEG-10 for inclusion in the library because it was
@@ -174,7 +174,7 @@ the burst.
 particular spot downwind from the burst received a large enough radiation dose to kill
 them.
 
-8. *I want an EMP model. Why didn't you include one?*
+*I want an EMP model. Why didn't you include one?*
 
 Unfortunately, there are no 'empirical' EMP models, even though I gather there have
 been serious attempts to create them. EMP phenomena are highly complex and not
@@ -186,13 +186,13 @@ requires a partial differential equation solver of some kind and certain details
 the design of the weapon being detonated that are generally kept classified (see point
 1 above).
 
-9. *How can I contribute to GLASSTONE?*
+*How can I contribute to GLASSTONE?*
 
 Bug reports and pull requests are more than welcome. 
 
 See the [project page on GitHub](https://github.com/GOFAI/glasstone).
 
-10. *Who are you?*
+*Who are you?*
 
 By education I am a historian of the Soviet Union, and in particular the history of
 that state's relationship with nuclear energy. I developed GLASSTONE as part of a
