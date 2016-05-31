@@ -126,7 +126,7 @@ Alternatively, you can use pip to install the package in developer mode (which w
 symlink the package into your site-packages directory instead of copying it). In the
 project root directory, run:
 ```
-pip intall pip install -e .
+pip install -e .
 ```
 
 For practical examples of how to use glasstone, see the scripts in the `/examples`
