@@ -305,7 +305,7 @@ def _altitude_sp(alt):
     return _altitude_p(alt)
 
 def _altitude_sd(alt):
-    return _altitude_sp(alt)**-1.0/3
+    return _altitude_sp(alt)**(-1.0/3)
 
 def _altitude_st(alt):
     return _altitude_sd(alt) * _altitude_t(alt)**-0.5
