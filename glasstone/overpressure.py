@@ -547,7 +547,7 @@ def _overpressuretotalimpulse(r, y, alt):
     scaled_impulse, _ = quad(lambda t: _opatscaledtime(r, y, alt, sgr, shob, x_m, ta_air, dp, t), ta_air, ta_air + dp)
     return scaled_impulse * y**(1.0/3)
 
-def _dpt(shob, sgr, x_m, ta_air, dp_q, pair, b):
+def _dpt(shob, sgr, x_m, ta_air, dp_q, pair, b, t):
     if x_m > sgr or shob > 116:
         return pair * b
     else:
@@ -590,7 +590,7 @@ def _dynamicpressureatscaledtime(r, y, alt, t):
     delta_0 = max(shob_0**1.52 / 16330 - 0.29, 0)
     delta = 2.38 * np.exp(-7e-7 * abs(shob_0 - 750)**2.7 - 4e-7 * sgr_0**2) + delta_0
     b = _DNA_b(sgr, shob, ta_air, dp_q, t)
-    dpt = _dpt(shob, sgr, x_m, ta_air, dp_q, pair, b)
+    dpt = _dpt(shob, sgr, x_m, ta_air, dp_q, pair, b, t)
     n_q = _mass_density_ratio(dpt)
     return 0.5 * dpt * (n_q - 1) * (dpt / pair)**delta
 
